@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.unmannedstore.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="94dp"
+            android:layout_height="99dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/default_personal_image"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp" />
+
+        <ImageButton
+            android:id="@+id/scan_button"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
+            android:layout_below="@+id/user_image"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/scan" />
+
+
+        <ImageView
+            android:id="@+id/code_image"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
+            android:layout_below="@+id/user_image"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/scan_button"
+            android:src="@drawable/code_image1" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="343dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/scan_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="-110dp"
+            android:paddingLeft="120dp"
+            android:text=" 查询 "
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/report_button"
+            android:layout_width="343dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/search_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/report"
+            android:paddingLeft="60dp"
+            android:drawablePadding="-50dp"
+            android:text=" 上报健康信息 "
+            android:textSize="30dp" />
+        <Button
+            android:id="@+id/shop_button"
+            android:layout_width="343dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/report_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/cart"
+            android:paddingLeft="120dp"
+            android:drawablePadding="-110dp"
+            android:text=" 购物 "
+            android:textSize="30dp" />
+
+        <View
+            android:layout_below="@id/shop_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+</ScrollView>
