@@ -46,7 +46,7 @@
             android:layout_height="60dp"
             android:layout_below="@+id/scan_button"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/button"
             android:drawableLeft="@drawable/search"

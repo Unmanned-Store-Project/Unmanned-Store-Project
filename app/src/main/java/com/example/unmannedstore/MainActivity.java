@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
             public void onSwipeRight() {
                 if (count == 0) {
-                    imageView.setImageResource(R.drawable.good_night_img);
+                    //imageView.setImageResource(R.drawable.good_night_img);
                     textView.setText("Night");
                     count = 1;
                 } else {
-                    imageView.setImageResource(R.drawable.good_morning_img);
+                    //imageView.setImageResource(R.drawable.good_morning_img);
                     textView.setText("Morning");
                     count = 0;
                 }
@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
 
             public void onSwipeLeft() {
                 if (count == 0) {
-                    imageView.setImageResource(R.drawable.good_night_img);
+                    // imageView.setImageResource(R.drawable.good_night_img);
                     textView.setText("Night");
                     count = 1;
                 } else {
-                    imageView.setImageResource(R.drawable.good_morning_img);
+                    // imageView.setImageResource(R.drawable.good_morning_img);
                     textView.setText("Morning");
                     count = 0;
                 }

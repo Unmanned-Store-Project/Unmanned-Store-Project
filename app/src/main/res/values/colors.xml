@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="textInputLayout">#96ffffff</color>
+    <color name="colorItemName">#000000</color>
+    <color name="colorItemPrice">#FF0000</color>
 </resources>
