@@ -40,7 +40,7 @@ public class BalanceTranscationActivity extends Activity implements AdapterWrapp
         TransactionDetail trans = new TransactionDetail();
         String a = trans.toString();
         String[] tr=a.split("/");
-
+        int tr_length = tr.length;
         setContentView(R.layout.activity_balance_transcation);
         list = new ArrayList<String>();
         /*
@@ -54,9 +54,13 @@ public class BalanceTranscationActivity extends Activity implements AdapterWrapp
 
         for(int j = 1; j <= 7; j++) {
             //set text view
-            list.add("\n"+"\b\b" +tr[transId + 0] + tr[transId + 1] +"￥"+ "\n\n" +"\b\b" + "to:\b" + tr[transId + 2] +
-                    "\b\b" + "fr:\b" + tr[transId + 3] + "\n\n" +"\b\b" + tr[transId + 4] +
-                    "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bid:\b" + tr[transId + 5]);
+            if(transId<tr_length) {
+                list.add("\n"+"\b\b" +tr[transId + 0] + tr[transId + 1] +"￥"+ "\n\n" +"\b\b" + "to:\b" + tr[transId + 2] +
+                        "\b\b" + "fr:\b" + tr[transId + 3] + "\n\n" +"\b\b" + tr[transId + 4] +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bid:\b" + tr[transId + 5]+"\n");
+                transId = transId + 6;
+            }
+            else if(transId>=tr_length) list.add("");
             transId = transId + 6;
             /*money.setText(tr[i]+tr[i+1]);
             mine.setText(tr[i+2]);
@@ -123,7 +127,7 @@ public class BalanceTranscationActivity extends Activity implements AdapterWrapp
                                     "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bid:\b" + tr[transId + 5]+"\n");
                             transId = transId + 6;
                         }
-                        else if(transId>=tr_length) list.add("$");
+                        else if(transId>=tr_length) list.add("");
                     }
                     loadingFinished();
                 }
